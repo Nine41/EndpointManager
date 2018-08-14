@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sudo hdiutil attach -readonly -noverify -noautoopen "/tmp/IvantiMacAgent.dmg"
+
+if ! test -d "/Volumes/LDMSClient"; then
+	echo "ERROR: Ivanti Agent DMG could not be mounted!"
+	exit 1
+fi
+
+sudo installer -pkg "/Volumes/LDMSClient/ldmsagent.pkg" -target /
+
+sudo hdiutil detach "/Volumes/LDMSClient"
+
+rm -f /tmp/IvantiMacAgent.dmg
+rm -f /tmp/manifest.plist
+rm -f /tmp/IvantiMacAgent.pkg

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if test -d "/Volumes/LDMSClient"; then
+	sudo hdiutil detach "/Volumes/LDMSClient"
+fi
