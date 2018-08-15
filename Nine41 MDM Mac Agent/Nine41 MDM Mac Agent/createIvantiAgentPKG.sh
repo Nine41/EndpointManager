@@ -4,7 +4,7 @@
 #  Created by Nine41 Consulting, LLC 8/12/18.
 
 # variables for script
-developerInstallerCert="certID"
+developerInstallerCert="devolperID"
 agentVersion="11.0.0.25"
 agentIdentifier="com.ivanti.macOS.agent"
 
@@ -79,4 +79,4 @@ echo "Deleting the first blank line from the plist array"
 
 # cleaning up un-needed files
 rm -f ./Agent/IvantiMacAgent.pkg
-rm -f ./Agent/IvantiMacAgent.dmg 
+rm -f ./Agent/IvantiMacAgent.dmg
